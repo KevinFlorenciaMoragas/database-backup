@@ -38,14 +38,15 @@ DB_FILE=database.sqlite
 
 ## 🛠 Uso
 Ejecuta el comando para realizar un **backup**:
-```sh
+```
+sh
 npx ts-node ./src/index.ts backup --type mysql
 Reemplaza `mysql` con el tipo de base de datos que deseas respaldar.
-
+```
 ---
 
 ## 📜 Estructura del Proyecto
-``
+```
 /database-backup
 │── src/
 │   ├── commands/
@@ -56,7 +57,7 @@ Reemplaza `mysql` con el tipo de base de datos que deseas respaldar.
 │── .env                  # Variables de entorno
 │── package.json          # Dependencias del proyecto
 │── README.md             # Documentación
-``
+```
 
 ---
 
