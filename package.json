@@ -1,0 +1,31 @@
+{
+  "name": "database-backup",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "dev": "ts-node ./src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@google-cloud/storage": "^7.15.2",
+    "@slack/webhook": "^7.0.4",
+    "archiver": "^7.0.1",
+    "aws-sdk": "^2.1692.0",
+    "commander": "^13.1.0",
+    "dotenv": "^16.4.7",
+    "mongodb": "^6.14.1",
+    "mysql2": "^3.12.0",
+    "pg": "^8.13.3",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^4.0.0"
+  }
+}
