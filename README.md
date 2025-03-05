@@ -1,48 +1,51 @@
-📌 Database Backup Script
+# 📌 Database Backup Script
 
-Este proyecto es un script en Node.js que permite realizar backups automáticos de bases de datos MySQL, PostgreSQL, MongoDB y SQLite.
+Este proyecto es un script en **Node.js** que permite realizar backups automáticos de bases de datos **MySQL, PostgreSQL, MongoDB y SQLite**.
 
-🚀 Características
+---
 
-Soporte para MySQL, PostgreSQL, MongoDB y SQLite
+## 🚀 Características
+✅ Soporte para **MySQL, PostgreSQL, MongoDB y SQLite**
+✅ Exportación de **estructura y datos**
+✅ Generación de archivos **.sql** o **.json** según el tipo de base de datos
+✅ Comprimido en formato **.zip**
 
-Exportación de estructura y datos
+---
 
-Generación de archivos .sql o .json según el tipo de base de datos
-
-Comprimido en formato .zip
-
-📦 Instalación
-
-Clonar el repositorio:
-
+## 📦 Instalación
+### 1️⃣ Clonar el repositorio:
+```sh
 git clone https://github.com/tuusuario/database-backup.git
 cd database-backup
+```
 
-Instalar dependencias:
-
+### 2️⃣ Instalar dependencias:
+```sh
 npm install
+```
 
-Configurar las variables de entorno en un archivo .env:
-
-DB_TYPE=mysql  # mysql, postgresql, mongodb, sqlite
+### 3️⃣ Configurar las variables de entorno en un archivo `.env`:
+```ini
 DB_HOST=localhost
 DB_USER=root
 DB_PASS=tu_contraseña
 DB_NAME=tu_base_de_datos
 DB_URI=mongodb://localhost:27017/tu_base
 DB_FILE=database.sqlite
+```
 
-🛠 Uso
+---
 
-Ejecuta el comando para realizar un backup:
-
+## 🛠 Uso
+Ejecuta el comando para realizar un **backup**:
+```sh
 npx ts-node ./src/index.ts backup --type mysql
+Reemplaza `mysql` con el tipo de base de datos que deseas respaldar.
 
-Reemplaza mysql con el tipo de base de datos que deseas respaldar.
+---
 
-📜 Estructura del Proyecto
-
+## 📜 Estructura del Proyecto
+```
 /database-backup
 │── src/
 │   ├── commands/
@@ -53,57 +56,57 @@ Reemplaza mysql con el tipo de base de datos que deseas respaldar.
 │── .env                  # Variables de entorno
 │── package.json          # Dependencias del proyecto
 │── README.md             # Documentación
+```
 
-📌 Tecnologías Usadas
+---
 
-Node.js
+## 📌 Tecnologías Usadas
+🛠 **Node.js**
+🛠 **TypeScript**
+🛠 **MySQL2** para MySQL
+🛠 **pg** para PostgreSQL
+🛠 **mongodb** para MongoDB
+🛠 **sqlite3** y **sqlite** para SQLite
+🛠 **dotenv** para configuración
+🛠 **archiver** para comprimir backups
 
-TypeScript
+---
 
-MySQL2 para MySQL
-
-pg para PostgreSQL
-
-mongodb para MongoDB
-
-sqlite3 y sqlite para SQLite
-
-dotenv para configuración
-
-archiver para comprimir backups
-
-🔄 Restauración del Backup
-
-MySQL / PostgreSQL:
-
+## 🔄 Restauración del Backup
+### 🔹 MySQL / PostgreSQL:
+```sh
 mysql -u root -p tu_base_de_datos < backup.sql
+```
 
-MongoDB:
-
+### 🔹 MongoDB:
+```sh
 mongorestore --db tu_base_de_datos --archive=backup.gz
+```
 
-SQLite:
+### 🔹 SQLite:
+Simplemente reemplaza el archivo `.sqlite` con el backup.
 
-Simplemente reemplaza el archivo .sqlite con el backup.
+---
 
-🛠 Contribuir
+## 🛠 Contribuir
+1. **Haz un fork** del repositorio.
+2. **Crea una rama** para tu cambio:
+   ```sh
+   git checkout -b mi-nueva-feature
+   ```
+3. **Realiza tus cambios** y haz commit:
+   ```sh
+   git commit -m "Agregada nueva funcionalidad"
+   ```
+4. **Sube tus cambios**:
+   ```sh
+   git push origin mi-nueva-feature
+   ```
+5. **Abre un Pull Request** en GitHub.
 
-Haz un fork del repositorio.
+---
 
-Crea una rama para tu cambio:
+## 📄 Licencia
+Este proyecto está bajo la licencia **MIT**.
 
-git checkout -b mi-nueva-feature
-
-Realiza tus cambios y haz commit:
-
-git commit -m "Agregada nueva funcionalidad"
-
-Sube tus cambios:
-
-git push origin mi-nueva-feature
-
-Abre un Pull Request en GitHub.
-
-📄 Licencia
-
-Este proyecto está bajo la licencia MIT.
+---
