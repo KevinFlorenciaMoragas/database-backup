@@ -51,6 +51,7 @@ Reemplaza `mysql` con el tipo de base de datos que deseas respaldar.
 │── src/
 │   ├── commands/
 │   │   ├── backup.ts      # Lógica para realizar backup
+        ├── restore.ts      # Lógica para realizar backup
 │   ├── services/
 │   │   ├── database.ts    # Conexión con la base de datos
 │   ├── index.ts          # Punto de entrada del script
